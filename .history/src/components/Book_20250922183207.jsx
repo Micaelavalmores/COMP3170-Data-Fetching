@@ -1,0 +1,14 @@
+import './Styles.css';
+
+function Book ({image, author, more }) {
+    return (
+        <div className="Book">
+            <img className='Image' src={image} alt={author} />
+            <span className="By">by</span>
+            <span className="AuthorName">{author}</span>
+            <a href={more}
+        </div>
+    )
+}
+
+export default Book;

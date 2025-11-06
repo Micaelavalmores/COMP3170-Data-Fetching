@@ -1,0 +1,57 @@
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 100%;
+  justify-content: space-between;
+
+  footer {
+    padding: 0;
+    background: pink;
+    color: #fff;
+
+    p {
+        text-align: center;
+        padding: 1em 0;
+    }
+  }
+
+  .content {
+    margin: 0 ;
+    background: pink;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    color: white;
+  }
+
+  .mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+  }
+
+  .Book {
+    margin: 10px;
+  }
+
+  .AddButton {
+    padding: 8em;
+    margin: 1em;
+    height: 3em;
+    border: 2px solid pink;
+    border-radius: 2%;
+    background-color: rgb(255, 237, 240);
+    color: rgb(99, 0, 16);
+  }
+
+}
+
+.contentBody {
+  display: flex;
+  flex-direction: row;
+}

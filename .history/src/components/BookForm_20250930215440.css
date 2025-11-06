@@ -1,0 +1,79 @@
+
+form {
+    font-family: 'Georgia', serif;
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    padding: 20px 24px;
+    background: #fff;
+    color: #161616;
+  }
+  
+  form h2 {
+    font-size: 2.3em;
+    font-weight: 700;
+    margin-bottom: 28px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.28em;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px 14px;
+    font-family: 'Georgia', serif;
+    font-size: 1.1em;
+    border: 2px solid #383838;
+    border-radius: 0;
+    background-color: #fafafa;
+    color: #222;
+    outline: none;
+    transition: border-color 0.25s ease;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]::placeholder,
+  input[type="number"]::placeholder {
+    color: #888;
+    font-style: italic;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    border-color: #3069ed;
+    background-color: #fff;
+  }
+  
+  div {
+    margin-top: 20px;
+  }
+  
+  button[type="submit"] {
+    background-color: #2d8c53;
+    color: white;
+    font-family: 'Georgia', serif;
+    font-size: 1.35em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 160px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    background-color: #21663b;
+    outline: none;
+  }
+  

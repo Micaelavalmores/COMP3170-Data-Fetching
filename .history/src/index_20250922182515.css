@@ -1,0 +1,45 @@
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 100%;
+  justify-content: space-between;
+
+  footer {
+    padding: 0;
+    background: #141414;
+    color: #fff;
+
+    p {
+        text-align: center;
+        padding: 1em 0;
+    }
+  }
+
+  .content {
+    margin: 0 ;
+    background: pink;
+    display: flex;
+    justify-content: center;
+    he
+  }
+
+  .mainContent {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Book {
+    margin: 2em;
+  }
+
+  .AddButton {
+    margin: 2em;
+  }
+
+}
+

@@ -1,0 +1,30 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* ensures full height */
+  width: 100%;
+  margin: 0;
+  background: #fff;
+}
+
+.contentBody {
+  display: flex;
+  flex-direction: row;
+  flex: 1; /* grows to fill space and pushes footer down */
+}
+
+footer {
+  padding: 0;
+  background: pink;
+  color: #fff;
+}
+
+footer p {
+  text-align: center;
+  padding: 1em 0;
+}

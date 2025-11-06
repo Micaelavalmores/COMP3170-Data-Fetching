@@ -1,0 +1,11 @@
+.Book {
+    border: 2px solid red;
+    max-width: 20em;
+    border-radius: 2%;
+    padding: 1em;
+}
+
+.BookContent {
+    display: flex;
+    flex
+}
