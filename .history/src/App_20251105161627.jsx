@@ -67,7 +67,6 @@ function App() {
   const [filterLanguage, setFilterLanguage] = useState("");
   const [searchTitle, setSearchTitle] = useState("");
   const [currentView, setCurrentView] = useState("bookListing"); // "bookListing" or "loanManagement"
-  const [selectedBookForDetails, setSelectedBookForDetails] = useState(null);
   
   // Loan form state
   const [loanForm, setLoanForm] = useState({
@@ -156,19 +155,6 @@ function App() {
   // Get selected book for editing
   const selectedBook = books.find(book => book.isbn13 === selectedBookId);
 
-  // Handle view details
-  const handleViewDetails = (isbn13) => {
-    const book = books.find(b => b.isbn13 === isbn13);
-    if (book) {
-      setSelectedBookForDetails(book);
-    }
-  };
-
-  // Handle close details
-  const handleCloseDetails = () => {
-    setSelectedBookForDetails(null);
-  };
-
   // Toggle selection - only one book can be selected at a time
   const handleSelect = (isbn13) => {
     setBooks(prevBooks => 
@@ -256,9 +242,8 @@ function App() {
             className="actionButton"
             onClick={() => setCurrentView(currentView === "bookListing" ? "loanManagement" : "bookListing")}
             style={{
-              background: currentView === "bookListing" ? 'white' : 'pink',
-              color: currentView === "bookListing" ? 'pink' : 'white',
-              border: currentView === "bookListing" ? '3px solid pink' : 'none',
+              background: 'pink',
+              color: 'white',
             }}
           >
             {currentView === "bookListing" ? "Loan Management" : "Book Listing"}
@@ -295,7 +280,7 @@ function App() {
                 placeholder="Enter title..."
                 className="filterInput"
                 style={{
-                  width: 'calc(100% - 6em)',
+                  width: '100%',
                   padding: '8px',
                   marginTop: '4px',
                   border: '1px solid #ffb6c1',
@@ -313,7 +298,7 @@ function App() {
                 value={filterPublisher}
                 onChange={(e) => setFilterPublisher(e.target.value)}
                 style={{
-                  width: 'calc(100% - 6em)',
+                  width: '100%',
                   padding: '8px',
                   marginTop: '4px',
                   border: '1px solid #ffb6c1',
@@ -337,7 +322,7 @@ function App() {
                 value={filterLanguage}
                 onChange={(e) => setFilterLanguage(e.target.value)}
                 style={{
-                  width: 'calc(100% - 6em)',
+                  width: '100%',
                   padding: '8px',
                   marginTop: '4px',
                   border: '1px solid #ffb6c1',
@@ -362,7 +347,7 @@ function App() {
                 setSearchTitle("");
               }}
               style={{
-                width: 'calc(100% - 6em)',
+                width: '100%',
                 padding: '8px',
                 marginTop: '10px',
                 background: '#ffb6c1',
@@ -395,7 +380,6 @@ function App() {
                   onSelect={handleSelect}
                   isSelected={book.selected}
                   isOnLoan={loanedBookIds.has(book.isbn13)}
-                  onViewDetails={handleViewDetails}
                 />
               ))
             ) : (
@@ -581,14 +565,6 @@ function App() {
           />
         )}
       </Modal>
-
-      {/* Book Details View */}
-      {selectedBookForDetails && (
-        <BookDetails
-          book={selectedBookForDetails}
-          onClose={handleCloseDetails}
-        />
-      )}
     </div>
   );
 }

@@ -1,0 +1,264 @@
+.bookDetailsOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.bookDetailsContainer {
+  background: white;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.bookDetailsClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #bc1487;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: background 0.2s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.bookDetailsClose:hover {
+  background: #9a0f6b;
+}
+
+.bookDetailsContent {
+  padding: 40px;
+}
+
+.bookDetailsMain {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid #ffb6c1;
+}
+
+.bookDetailsImage {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.bookDetailsInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bookDetailsTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #8b008b;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.bookDetailsSubtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
+
+.bookDetailsMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.bookDetailsField {
+  display: flex;
+  gap: 12px;
+}
+
+.bookDetailsLabel {
+  font-weight: 600;
+  color: #8b008b;
+  min-width: 100px;
+}
+
+.bookDetailsValue {
+  color: #333;
+}
+
+.bookDetailsLink {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #bc1487;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: background 0.2s ease;
+  align-self: flex-start;
+}
+
+.bookDetailsLink:hover {
+  background: #9a0f6b;
+}
+
+.similarBooksSection {
+  margin-top: 32px;
+}
+
+.similarBooksTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #8b008b;
+  margin: 0 0 20px 0;
+}
+
+.similarBooksLoading,
+.similarBooksError,
+.similarBooksEmpty {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+}
+
+.similarBooksError {
+  color: #d32f2f;
+}
+
+.similarBooksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.similarBookCard {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  min-height: 240px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.similarBookCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.similarBookImage {
+  width: 110px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.similarBookInfo {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+  min-height: 60px;
+}
+
+.similarBookTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8b008b;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+  min-height: 55px;
+}
+
+.similarBookPrice {
+  font-size: 15px;
+  font-weight: 600;
+  color: #217a43;
+  margin: 0;
+  padding-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .bookDetailsMain {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bookDetailsImage {
+    width: 150px;
+    height: 210px;
+  }
+
+  .bookDetailsTitle {
+    font-size: 24px;
+  }
+
+  .similarBooksGrid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+  }
+
+  .similarBookCard {
+    min-height: 220px;
+    padding: 12px;
+  }
+
+  .similarBookImage {
+    width: 90px;
+    height: 120px;
+  }
+
+  .similarBookTitle {
+    font-size: 12px;
+    min-height: 48px;
+    -webkit-line-clamp: 2;
+  }
+}
+

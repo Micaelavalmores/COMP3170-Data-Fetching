@@ -256,9 +256,8 @@ function App() {
             className="actionButton"
             onClick={() => setCurrentView(currentView === "bookListing" ? "loanManagement" : "bookListing")}
             style={{
-              background: currentView === "bookListing" ? 'white' : 'pink',
-              color: currentView === "bookListing" ? 'pink' : 'white',
-              border: currentView === "bookListing" ? '3px solid pink' : 'none',
+              background: 'pink',
+              color: 'white',
             }}
           >
             {currentView === "bookListing" ? "Loan Management" : "Book Listing"}

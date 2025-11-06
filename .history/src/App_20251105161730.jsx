@@ -256,9 +256,8 @@ function App() {
             className="actionButton"
             onClick={() => setCurrentView(currentView === "bookListing" ? "loanManagement" : "bookListing")}
             style={{
-              background: currentView === "bookListing" ? 'white' : 'pink',
-              color: currentView === "bookListing" ? 'pink' : 'white',
-              border: currentView === "bookListing" ? '3px solid pink' : 'none',
+              background: 'pink',
+              color: 'white',
             }}
           >
             {currentView === "bookListing" ? "Loan Management" : "Book Listing"}
@@ -295,7 +294,7 @@ function App() {
                 placeholder="Enter title..."
                 className="filterInput"
                 style={{
-                  width: 'calc(100% - 6em)',
+                  width: '100%',
                   padding: '8px',
                   marginTop: '4px',
                   border: '1px solid #ffb6c1',
@@ -313,7 +312,7 @@ function App() {
                 value={filterPublisher}
                 onChange={(e) => setFilterPublisher(e.target.value)}
                 style={{
-                  width: 'calc(100% - 6em)',
+                  width: '100%',
                   padding: '8px',
                   marginTop: '4px',
                   border: '1px solid #ffb6c1',
@@ -337,7 +336,7 @@ function App() {
                 value={filterLanguage}
                 onChange={(e) => setFilterLanguage(e.target.value)}
                 style={{
-                  width: 'calc(100% - 6em)',
+                  width: '100%',
                   padding: '8px',
                   marginTop: '4px',
                   border: '1px solid #ffb6c1',
@@ -362,7 +361,7 @@ function App() {
                 setSearchTitle("");
               }}
               style={{
-                width: 'calc(100% - 6em)',
+                width: '100%',
                 padding: '8px',
                 marginTop: '10px',
                 background: '#ffb6c1',

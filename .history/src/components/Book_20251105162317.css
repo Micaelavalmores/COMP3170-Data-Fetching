@@ -1,0 +1,158 @@
+.Book {
+  width: 220px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 2px 8px rgba(144, 48, 115, 0.08);
+  border-radius: 12px;
+  background: pink;
+  margin: 14px;
+  padding: 16px 12px 12px 12px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+  
+  .Image {
+    width: 120px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .BookContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    margin-bottom: 0;
+    gap: 4px;
+  }
+  
+  .By {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 2px;
+  }
+  
+  .Title {
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 2px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .Subtitle {
+    font-size: 13px;
+    color: white;
+    margin-bottom: 6px;
+    text-align: center;
+    min-height: 36px;
+  }
+  
+  .isbn13 {
+    font-size: 10px;
+    color: white;
+    margin-bottom: 2px;
+  }
+  
+  .price {
+    font-size: 23px;
+    font-weight: 500;
+    color: #217a43;
+    margin-bottom: 2px;
+  }
+  
+  .viewDetailsButton {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 11px 0;
+    background: #8b008b;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.1px;
+    margin-top: -2em;
+    margin-bottom: 8px;
+    transition: background 0.18s;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  
+  .viewDetailsButton:hover,
+  .viewDetailsButton:focus {
+    background: #6b006b;
+  }
+
+  .url {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 11px 0;
+    background: #bc1487;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 7px;
+    text-decoration: none;
+    letter-spacing: 0.1px;
+    margin-top: -2em;
+    transition: background 0.18s;
+    box-sizing: border-box;
+  }
+  
+  .url:hover,
+  .url:focus {
+    background: #f31045;
+  }
+  
+
+  /* Selected book styles */
+  .Book.selected {
+    background: #ff6b9d;
+    border: 3px solid #bc1487;
+    box-shadow: 0 4px 16px rgba(188, 20, 135, 0.3);
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
+
+  .Book.selected .price {
+    color: #1a5d2e;
+    font-weight: 600;
+  }
+
+  .Book.selected .url {
+    background: #bc1487;
+    box-shadow: 0 2px 8px rgba(188, 20, 135, 0.4);
+  }
+
+  .Book.selected .url:hover,
+  .Book.selected .url:focus {
+    background: #9a0f6b;
+  }
+
+  /* On loan book styles */
+  .Book.onLoan {
+    opacity: 0.7;
+    border: 2px dashed #8b008b;
+  }
+
+  .loanBadge {
+    display: inline-block;
+    background: #8b008b;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
